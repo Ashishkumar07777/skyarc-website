@@ -85,7 +85,7 @@ async function handleFormSubmit(event) {
       const applicationType = optGroup.label === 'Internships' ? 'internship' : 'career';
       formData.append('applicationType', applicationType);
 
-      const API_ENDPOINT = 'http://localhost:5000/api/applications/submit';
+      const API_ENDPOINT = 'https://skyarc-backend.onrender.com/api/applications/submit';
       
       const response = await fetch(API_ENDPOINT, {
         method: 'POST',
