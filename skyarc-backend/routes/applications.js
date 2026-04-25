@@ -47,8 +47,8 @@ router.post('/submit', upload.single('resume'), async (req, res) => {
     const { fullName, email, phone, applicationType, positionApplyingFor, coverLetter } = req.body;
 
     // Validation
-    if (!fullName || !email || !phone || !applicationType || !positionApplyingFor || !coverLetter || !req.file) {
-      return res.status(400).json({ success: false, message: 'All fields, including resume, are required.' });
+    if (!fullName || !email || !phone || !applicationType || !positionApplyingFor || !req.file) {
+      return res.status(400).json({ success: false, message: 'All fields, except the cover letter, are required (including resume).' });
     }
     if (!/^\d{10}$/.test(phone)) {
         return res.status(400).json({ success: false, message: 'Phone number must be 10 digits.' });
@@ -61,7 +61,7 @@ router.post('/submit', upload.single('resume'), async (req, res) => {
       phone: phone.trim(),
       applicationType,
       positionApplyingFor: positionApplyingFor.trim(),
-      coverLetter: coverLetter.trim(),
+      coverLetter: coverLetter ? coverLetter.trim() : '',
       resume: {
         filename: req.file.filename,
         filepath: req.file.path,
