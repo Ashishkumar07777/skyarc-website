@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#003fa4",
+                        "outline": "#8c90a1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#b3c5ff",
+                        "on-primary-fixed": "#001849",
+                        "on-surface-variant": "#c2c6d8",
+                        "primary-container": "#0066ff",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#071d30",
+                        "on-primary-container": "#f8f7ff",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#003642",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#1e3246",
+                        "outline-variant": "#424656",
+                        "tertiary-fixed-dim": "#b4c8e2",
+                        "inverse-primary": "#0054d6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed-variant": "#004e5e",
+                        "secondary-container": "#00d5fe",
+                        "secondary-fixed": "#b2ebff",
+                        "on-primary": "#002b75",
+                        "on-tertiary-container": "#f4f7ff",
+                        "secondary-fixed-dim": "#2dd8ff",
+                        "on-secondary-fixed": "#001f27",
+                        "background": "#131313",
+                        "primary-fixed": "#dae1ff",
+                        "on-background": "#e5e2e1",
+                        "tertiary-fixed": "#d0e4ff",
+                        "surface-tint": "#b3c5ff",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary": "#b4c8e2",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-container": "#00596b",
+                        "surface-bright": "#3a3939",
+                        "secondary": "#a9e9ff",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#60738a",
+                        "on-tertiary-fixed-variant": "#35485e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hud-blur {
+            backdrop-filter: blur(20px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-900/40 backdrop-blur-2xl bg-white/5 shadow-2xl shadow-blue-900/10">
+<div class="flex justify-between items-center w-full px-8 md:px-16 h-24 max-w-[1920px] mx-auto">
+<div class="text-xl font-black tracking-tighter text-white uppercase">SkyArc</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Home</a>
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-white border-b border-blue-500 pb-1" href="#">Services</a>
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-zinc-400 hover:text-zinc-100 transition-colors" href="#">About Us</a>
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Careers</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-xl font-['Inter'] tracking-tighter uppercase text-[10px] font-bold hover:opacity-80 transition-all duration-300 active:scale-95">
+                Explore Solutions
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[614px] flex items-center px-8 md:px-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="cinematic wide shot of high-tech drones flying over a misty futuristic landscape at dawn with deep blue atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt1qJlxrulPYz-7iJSsCttmHVFd25uUd4rIviwgKlHnNVB31wmLdwQ7sf75MesmfFX24yWfKNpxQcqmxmSrho4Ej-l0MluBkvBKnNAVk2qDBsGEmHGBKaCoYz0wvcON5aKON-mtF-4wQqWvt1f-n1KlhgnmknHQgEbB6-7O81WvygusV7EzmsEuLf96FAW5l8Jrxm1QDTyQf-YVhWmRVIs2_Fzksf9JZp_e8Vjw3aiAbUe-Habd_EESXgmUV_j7D70cMhsXo90wmvS"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="mb-4 flex items-center gap-4">
+<div class="h-[1px] w-12 bg-primary-container"></div>
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-secondary">Our Capabilities</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white mb-8">
+                    Comprehensive<br/>Drone Solutions
+                </h1>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed mb-10">
+                    SkyArc engineered platforms provide tactical superiority across the cinematic horizon. Precision data, autonomous flight, and atmospheric intelligence redefined for the industrial frontier.
+                </p>
+</div>
+<!-- Signature Glow -->
+<div class="absolute -right-20 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[150px] rounded-full pointer-events-none"></div>
+</section>
+<!-- Services Grid - Alternating Blocks -->
+<section class="py-24 space-y-48">
+<!-- 1. Aerial Mapping & Surveying -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Mapping-01</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Aerial Mapping &amp; Surveying</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">High-fidelity photogrammetry and topographical modeling with sub-centimeter accuracy. Our drones capture thousands of high-resolution data points to create precise 3D digital twins of any terrain.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">adjust</span> Orthomosaic Generation</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">adjust</span> Volumetric Analysis</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">adjust</span> Cadastral Surveying</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="overhead view of a high-tech mapping drone scanning a rocky terrain with digital grid overlays and laser lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATSna5kebMo4xqRDUn_GCkZylRo6rwI91zQwZfJyht056t3gAIQ2uRcXyTbhtRJc-iXH77x_oSJhgY0lFQqUEcVW36VSpj_dLmLDQCb6GdldEGyk4VJ2v8mHK05-Fo33FzidYzJ0j-Ik9THAVDxaJ9s-ZNSHeLMxxB7T9qZpz-aglSeA4mRkSE90-2uePtZWuf_e3xXuTRJr3SGM5V8RamRCIjS2LziR3RnvSdrBYDfp1bb6jRCBnjFgmbx0kDW6xx0E6S293kpiCT"/>
+</div>
+</div>
+</div>
+<!-- 2. Inspection & Monitoring -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 md:order-2 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Inspect-02</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Inspection &amp; Monitoring</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Autonomous structural health monitoring for unreachable assets. We utilize AI-driven defect detection to identify cracks, corrosion, and anomalies in real-time, ensuring asset longevity.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">radar</span> Bridge Integrity Analysis</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">radar</span> Industrial Chimney Scans</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">radar</span> 4K Real-time Live Stream</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6 md:order-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="drone hovering close to a massive industrial steel structure at twilight, cinematic lighting with orange sparks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB8nbBd_7BBUjN9UQlNcURzIdSwfnHjTHH_5xVJLxZ5QLEEP3TdWb58x3Mba87egmHM-VgKNx0GVIqRQ_IiMRtY8BxmWd6bSAjpbu4Q6DPza0fLCAErnjEqcTbWDjGLFV3fAuvhcNK04DEDmReB0iYKiiHPnlp1EbMYOoF_M_d2v2lwLgXH-1OXSuTwxZ_vPab3S0yZZpAI2_0WcrCINIlpL9GAnCXaxFn_kTzIaZcU9F8lZBTrYmjSbjsynMgQbrbTHXxVttAuAfR"/>
+</div>
+</div>
+</div>
+<!-- 3. Agriculture & Crop Health -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Agro-03</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Agriculture &amp; Crop Health</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">NDVI multispectral imaging to optimize yield and minimize chemical usage. Our specialized drones provide localized data for precision spraying and early disease detection.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">eco</span> Multispectral Indexing</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">eco</span> Precision Crop Spraying</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">eco</span> Irrigation Management</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="aerial view of perfectly aligned green crop fields with a drone shadow passing over, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcEmygQdgtbwikEG6vgbljCFazXPaPxhd2I285YL05hJ1WJD9uOcVP_S2xlw5ZmniJ4bmrbOWxRUCmQQl-I__kRK28HNVYT_XPOtOXMHxQqMBJgHMJtx3Pa9qikeQ4poD4Sub2PQnu5NLbwyumc8vCjlq4BMMLeitedL8axzQgJVfHPNOXa-qT97i8RPasDS6BzvX0njXrFfReENcqVC8szBbG8Tmi2yZVfrI8fRoFll6FUOdetwYFuhU5l4QW6m3hLbDAgb-Z8Sev"/>
+</div>
+</div>
+</div>
+<!-- 4. Defence Monitoring & Surveillance -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 md:order-2 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Defence-04</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Defence Monitoring &amp; Surveillance</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Stealth-profile drones designed for persistent ISR operations. High-endurance platforms with encrypted data links for border security and tactical situational awareness.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">security</span> Border Patrol Automation</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">security</span> Night-Vision Intelligence</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">security</span> Object Tracking AI</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6 md:order-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="black tactical drone with glowing blue lights flying over a dark mountain ridge at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnKRpXabSWTabysgKEFv0IGxDPEXBpBHqaegBdVs7XKhDUXy_zxSz0ncO0bOBX_eokMSFqNHw10NYbJoJapAbHdJQcSBGj7jITkqD1pND6inXpCo_VZ5-Rxk8gDWMLhVlG8ZF9tyiPOBckkmzek1qnhHodZdsjPRC0B2zwY8dfVtC-lpc-JkEj1attv1-epL4CfyILW5l3CmRAlvkScz7mCz33DloDtb11o_CyNxtX0bX29sXfQaUM_3jVSBEVXUiEo2NTJDCSZcIu"/>
+</div>
+</div>
+</div>
+<!-- 5. Thermal & LiDAR Surveys -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Sensor-05</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Thermal &amp; LiDAR Surveys</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Penetrating vegetation and night-time barriers. Our LiDAR systems generate accurate point clouds through dense foliage, while thermal sensors pinpoint energy leaks and heat signatures.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">sensors</span> Forest Floor Mapping</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">sensors</span> Heat Loss Diagnostics</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">sensors</span> Power Line Clearance</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="glowing orange thermal imaging scan of an industrial complex shown on a tablet screen outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMWZ4CgBICgJ8LiDkzMZhAUFaj2AWUK4J5hgLyV_tZPdaMxaegptViIh9N0Hf_vElfwg3IDfv6sM-mZfW6oXuuQLpiw-XfUIlyEMuO_yjqVuaDFYfz5MZRGLVuHjRQGRrniXq3ElDIC7lfTEAUeC4gOIMOe8gl2OJ6YVVK-speeeqCFLWSg7InqX24iUENacvh0fgc8tkM3SwOAvfeIlfPrT_mKr9tQiTOcfgB44reIuI00-3CbYsNQLIgUY_IU9V-zZ42JKyTdDVM"/>
+</div>
+</div>
+</div>
+<!-- 6. Construction & Infrastructure -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 md:order-2 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Build-06</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Construction &amp; Infrastructure</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Streamline project lifecycles with weekly site progress updates. Create high-resolution BIM-compatible models to verify as-built conditions against architectural designs.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">architecture</span> BIM Integration</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">architecture</span> Progress Time-lapses</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">architecture</span> Safety Compliance Checks</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6 md:order-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="large construction site with cranes and rising steel beams viewed from a drone perspective during sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP9WfA23J-qYba5lNShHhaWTPGCHLoyj2D07J7lJqjav-8ooIKbEOc1tShzN4l7Ag1-jktmqAQfN_lAQSJL13zBfy0HU4-fwRTuudbprlHSsLGBbUEWur53MeHCTVKO-VekV8Cc3uGBXOsN9c2vb3xzgwEozsipgkKU5iubCIAgKlwglXJbtb-zOxA-hJfb3Nxl9-f47QHMjgZTVdhAmmm6Wtx5Lp3C_BOWGwZ_bjFBu-srOloc81pvvacr-nUr-TMG0DtcoERbqot"/>
+</div>
+</div>
+</div>
+<!-- 7. Media & Marketing -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Media-07</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Media &amp; Marketing</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Breathtaking 8K cinematic footage for films, commercials, and real estate. Our FPV (First Person View) pilots deliver high-speed, immersive shots that traditional cameras cannot capture.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">movie</span> Cinematic 8K ProRes</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">movie</span> High-Speed FPV Racing</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">movie</span> Live Event Broadcasting</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A heavy-lift professional cinema drone in flight with a high-end camera gimbal, capturing cinematic 8K footage during golden hour." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARMQc0FT_dhJYvvNjQ-yCbch3SEmnrP7V6khrPqhd9Ma2NLlSn1-1Ny7NpQeXtkJlayns3rnWva3S9HXcimG7vmNzLrie1ZpWrXJwVtxwtpYUzvi2Mv_VSeQYAV1RqEWctOo1AFUUgVDwQvoCnxQbldCA9uTvoD70nz4mfNlMpuLysRaVklpYY-VWFwaeQq7Oi50QXVSlILWcaeeMywDLUggGX2GqCYIKN8zrNLdnCOIlCnVJ_Gt2-oKklpaOdzE355MDo4XxaAcTh"/>
+</div>
+</div>
+</div>
+<!-- 8. Solar Panel Inspection -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 md:order-2 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Solar-08</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">Solar Panel Inspection</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Detect malfunctioning cells and bypass diodes automatically. Inspect massive solar farms in hours instead of weeks using automated flight paths and radiometrically calibrated thermal cameras.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">wb_sunny</span> Hotspot Detection</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">wb_sunny</span> Soiling Analysis</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">wb_sunny</span> PV Plant Mapping</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6 md:order-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="vast field of solar panels reflecting the sky, with a technical overlay showing heat spots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0aCVWfC9lWhzbwuyLE2DYFik5_1vvqppbrq5a_jJX35LpN7cA2QHUqWPGxdsICnN8CWch3YRxBhcMVUdjPuiGXSA2JQV1gjaWBTgEFQlvJg9sT2CR_iJojPtQu4pA9j0RBnDneDvMDUsEZMgwzNlUWf0yAQWzFiOhWF2mt4EaChDYkiHLnoyJWFkoF58MJMuv6ix9DsRztcRcHepH_GWvSltk9dlVGHFVdGkWrGpo2eZwLyPEXl8FU0mD3St6d0tS9zN9g1-Ey0sq"/>
+</div>
+</div>
+</div>
+<!-- 9. R&D, Training & Consultancy -->
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 space-y-8">
+<div class="font-label text-[11px] tracking-widest uppercase text-primary bg-primary-container/10 px-3 py-1 inline-block rounded-full">Telemetry: Lab-09</div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-white">R&amp;D, Training &amp; Consultancy</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Custom drone hardware engineering and enterprise pilot certification. We help organizations build their internal UAV departments from the ground up with expert training and legal compliance guidance.</p>
+<ul class="space-y-3 font-label text-sm uppercase tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">terminal</span> Custom Payload Integration</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">terminal</span> DGCA Pilot Certification</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">terminal</span> Fleet Management Software</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold tracking-tighter uppercase text-xs hover:opacity-90 transition-all">Book Now</button>
+</div>
+<div class="md:col-span-6">
+<div class="aspect-[4/3] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="engineer in a high-tech lab working on a drone motherboard with soldering tools and digital microscopes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSkx7XoCpwJma1dQqLQMI4ju4YeRnOgE8UkQEpvbwICgkcyxHMP8vX5WPQbsCBzcDnNogVxtdPEox6p6JssENlS2DIrYsttcAnCNTltVLFu4ZMXB6N0S_kiLM7B1NS6OcOVYWiHSDFauo2VwGjwBIRRXy0MFB9RpBUXIZkCVhxQndNBsCVs_1stGuZ9DIkAGILcnMOvjQqbDhOJclLa-ilcfuHLsMw10-X0UD-lY2-6B6JMPI1rULimyR-gqFdmAzUAKyM6v6sYqWj"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-8 md:px-16 mb-24">
+<div class="bg-surface-container-low rounded-3xl p-12 md:p-24 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container/5 pointer-events-none"></div>
+<div class="relative z-10">
+<h2 class="text-5xl md:text-7xl font-black tracking-tighter text-white mb-6">Ready to Take Flight?</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-xl mb-12">Consult with our aerospace engineers to find the right autonomous solution for your industry.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-xl font-bold tracking-tighter uppercase text-sm hover:scale-105 transition-transform">Schedule Consultation</button>
+<button class="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-xl font-bold tracking-tighter uppercase text-sm hover:bg-white/10 transition-colors">Download Brochure</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-16 py-20 max-w-[1920px] mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-black text-white tracking-tighter">SkyArc</div>
+<p class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600">© 2024 SkyArc Technologies. Engineered for the Cinematic Horizon.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-500 mb-6">Ecosystem</h4>
+<div class="flex flex-col space-y-3">
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Mission</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Solutions</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Fleet</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-500 mb-6">Company</h4>
+<div class="flex flex-col space-y-3">
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Careers</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Contact</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Privacy</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-500 mb-6">Global Ops</h4>
+<p class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 leading-relaxed">
+                    Satellite HQ: Sector 9, Neo-Industrial Zone<br/>
+                    Global Support: +1 (800) SKY-ARC-0
+                </p>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">public</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,371 @@
+/* ============================================================
+   SERVICES PAGE — Cinematic Horizon Design System
+   ============================================================ */
+
+/* ── Hero Header ── */
+.services-header {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-height) + var(--space-16)) var(--space-8) var(--space-16);
+  overflow: hidden;
+  background: #131313;
+}
+
+.services-header-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.services-header-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #131313, rgba(19,19,19,0.8), transparent);
+  z-index: 1;
+}
+
+.services-header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.services-header-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+}
+
+.services-header-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.services-header-line {
+  width: 48px;
+  height: 1px;
+  background: var(--color-accent-blue);
+}
+
+.telemetry-label {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-accent-cyan);
+}
+
+.services-header-title {
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: var(--font-weight-black);
+  line-height: 0.9;
+  letter-spacing: -3px;
+  color: var(--color-text-white);
+  margin-bottom: var(--space-8);
+}
+
+.services-header-sub {
+  font-size: 18px;
+  color: rgba(194, 198, 216, 0.8);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.services-header-glow {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  background: rgba(0, 102, 255, 0.1);
+  filter: blur(150px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Telemetry Chip ── */
+.telemetry-chip {
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #b3c5ff;
+  background: rgba(0, 102, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: var(--space-6);
+  font-weight: 500;
+}
+
+/* ── Service Blocks (alternating 12-col grid) ── */
+.services-list {
+  background: #131313;
+  padding: var(--space-24) 0;
+}
+
+.services-list > .service-block {
+  margin-bottom: 192px;
+}
+
+.services-list > .service-block:last-child {
+  margin-bottom: 0;
+}
+
+.service-block {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.service-block.reverse {
+  direction: rtl;
+}
+
+.service-block.reverse > * {
+  direction: ltr;
+}
+
+.service-block-content {
+  padding: var(--space-4) 0;
+}
+
+.service-block-title {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-white);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: var(--space-6);
+}
+
+.service-block-desc {
+  font-size: 17px;
+  color: rgba(194, 198, 216, 0.7);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+/* Feature list — Space Grotesk telemetry style */
+.service-block-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  list-style: none;
+}
+
+.service-block-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-label);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a9e9ff;
+  font-weight: 500;
+}
+
+.service-block-features .material-symbols-outlined {
+  font-size: 18px;
+  color: #a9e9ff;
+}
+
+/* Solid button (matching design) */
+.btn-solid {
+  display: inline-block;
+  background: var(--color-accent-blue);
+  color: var(--color-text-white);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: var(--font-weight-bold);
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-solid:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn-solid.btn-lg {
+  padding: 20px 40px;
+  font-size: 14px;
+}
+
+/* Glass button */
+.btn-glass {
+  display: inline-block;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--color-text-white);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: var(--font-weight-bold);
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-glass:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-glass.btn-lg {
+  padding: 20px 40px;
+  font-size: 14px;
+}
+
+/* Service Visual — Real photography */
+.service-block-visual {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #1c1b1b;
+}
+
+.service-block-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-block:hover .service-block-visual img {
+  transform: scale(1.05);
+}
+
+/* ── CTA Section ── */
+.services-cta {
+  padding: var(--space-24) var(--space-8) calc(var(--space-24) + 96px);
+  background: #131313;
+}
+
+.services-cta-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 48px 96px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: #1c1b1b;
+}
+
+.services-cta-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 102, 255, 0.05);
+  pointer-events: none;
+}
+
+.services-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.services-cta-heading {
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-white);
+  letter-spacing: -2px;
+  margin-bottom: var(--space-6);
+  line-height: 1;
+}
+
+.services-cta-sub {
+  font-size: 20px;
+  color: rgba(194, 198, 216, 0.7);
+  max-width: 640px;
+  margin: 0 auto var(--space-12);
+  line-height: 1.6;
+}
+
+.services-cta-buttons {
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Services Responsive ── */
+@media (max-width: 1024px) {
+  .service-block {
+    gap: var(--space-8);
+  }
+
+  .services-list > .service-block {
+    margin-bottom: 120px;
+  }
+
+  .services-cta-inner {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-header {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + var(--space-12));
+    padding-bottom: var(--space-12);
+  }
+
+  .services-header-title {
+    letter-spacing: -1.5px;
+  }
+
+  .service-block {
+    grid-template-columns: 1fr;
+  }
+
+  .service-block.reverse {
+    direction: ltr;
+  }
+
+  .service-block-visual {
+    order: -1;
+  }
+
+  .services-list > .service-block {
+    margin-bottom: 80px;
+  }
+
+  .services-cta-inner {
+    padding: 32px 24px;
+  }
+
+  .services-cta-heading {
+    letter-spacing: -1px;
+  }
+
+  .services-header-glow {
+    display: none;
+  }
+}

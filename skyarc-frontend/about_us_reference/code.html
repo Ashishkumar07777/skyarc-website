@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#003fa4",
+                    "outline": "#8c90a1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary": "#b3c5ff",
+                    "on-primary-fixed": "#001849",
+                    "on-surface-variant": "#c2c6d8",
+                    "primary-container": "#0066ff",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "surface": "#131313",
+                    "on-tertiary-fixed": "#071d30",
+                    "on-primary-container": "#f8f7ff",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#003642",
+                    "surface-dim": "#131313",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#1e3246",
+                    "outline-variant": "#424656",
+                    "tertiary-fixed-dim": "#b4c8e2",
+                    "inverse-primary": "#0054d6",
+                    "inverse-surface": "#e5e2e1",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "on-secondary-fixed-variant": "#004e5e",
+                    "secondary-container": "#00d5fe",
+                    "secondary-fixed": "#b2ebff",
+                    "on-primary": "#002b75",
+                    "on-tertiary-container": "#f4f7ff",
+                    "secondary-fixed-dim": "#2dd8ff",
+                    "on-secondary-fixed": "#001f27",
+                    "background": "#131313",
+                    "primary-fixed": "#dae1ff",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed": "#d0e4ff",
+                    "surface-tint": "#b3c5ff",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary": "#b4c8e2",
+                    "on-error-container": "#ffdad6",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-container": "#00596b",
+                    "surface-bright": "#3a3939",
+                    "secondary": "#a9e9ff",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-container": "#60738a",
+                    "on-tertiary-fixed-variant": "#35485e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cinematic-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, rgba(19, 19, 19, 0) 70%);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-900/40 backdrop-blur-2xl shadow-2xl shadow-blue-900/10 h-24">
+<div class="flex justify-between items-center w-full px-8 md:px-16 h-full max-w-[1920px] mx-auto">
+<div class="text-xl font-black tracking-tighter text-white uppercase">SkyArc</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Home</a>
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Services</a>
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-white border-b border-blue-500 pb-1" href="#">About Us</a>
+<a class="font-['Inter'] tracking-tighter uppercase text-[10px] font-bold text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Careers</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-xl font-['Inter'] tracking-tighter uppercase text-[10px] font-bold active:scale-95 transition-transform duration-200 hover:opacity-80">
+                Explore Solutions
+            </button>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Wide cinematic shot of a drone soaring above white clouds at dusk with a deep blue atmospheric gradient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF3N68UJGBYaAhOp5xPbsg7CcDE4YlHdblRFTgeNi2YJQej_bLBtpYzKFBA6M1CVvZjT3PJhyb5Me3zKN5jsodUGhEjShyZ1_3ooz5gWjw3SwZLVYzZDtKCMiERXSAZeuMBIwteXpnrw5c_rVNC9YLXgyNh0ZOa2Cu3M3K8sjryJS_mDIUEYrPSyFk8QnzetfRbLc4LP4sggJOHGRg5B0VqkV07uwnJa6P41J9UtA2fl0qzAa6ZyBP_F9bbZONU60xgZrTNTYcj-Bb"/>
+<div class="absolute inset-0 cinematic-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-8">
+<span class="font-label text-secondary tracking-[0.4em] uppercase text-xs mb-6 block">The Aerospace Frontier</span>
+<h1 class="text-7xl md:text-9xl font-black tracking-tighter text-white uppercase leading-[0.9]">
+                    We See <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Further</span>
+</h1>
+</div>
+<!-- Overlay Cards -->
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-8 mt-24">
+<div class="bg-surface-variant/40 backdrop-blur-2xl p-8 rounded-xl border border-outline-variant/15 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary mb-6 text-3xl">rocket_launch</span>
+<h3 class="font-headline text-xl font-bold text-white mb-4">Mission</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">To democratize the Indian stratosphere through accessible, high-performance drone technologies engineered for the subcontinent's unique challenges.</p>
+</div>
+<div class="bg-surface-variant/40 backdrop-blur-2xl p-8 rounded-xl border border-outline-variant/15 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary mb-6 text-3xl">visibility</span>
+<h3 class="font-headline text-xl font-bold text-white mb-4">Vision</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Creating a future where autonomous aerial intelligence is the backbone of India's logistical and environmental monitoring infrastructure.</p>
+</div>
+<div class="bg-surface-variant/40 backdrop-blur-2xl p-8 rounded-xl border border-outline-variant/15 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary mb-6 text-3xl">verified_user</span>
+<h3 class="font-headline text-xl font-bold text-white mb-4">Core Values</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Uncompromising safety, absolute precision, and a relentless commitment to homegrown innovation that scales globally.</p>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-12">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter text-white uppercase max-w-2xl leading-none">
+                        The sky is not the limit. <br/> <span class="text-zinc-600">It is where we work.</span>
+</h2>
+<div class="font-label text-secondary-fixed-dim text-sm tracking-widest uppercase pb-4">Real-time Telemetry Status: ACTIVE</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-outline-variant/10">
+<div class="bg-surface-container-low p-12">
+<div class="font-label text-secondary mb-2 text-xs tracking-widest uppercase">Global Partners</div>
+<div class="text-5xl font-black text-white tracking-tighter">500+</div>
+</div>
+<div class="bg-surface-container-low p-12">
+<div class="font-label text-secondary mb-2 text-xs tracking-widest uppercase">Patents Filed</div>
+<div class="text-5xl font-black text-white tracking-tighter">10+</div>
+</div>
+<div class="bg-surface-container-low p-12">
+<div class="font-label text-secondary mb-2 text-xs tracking-widest uppercase">Flight Hours</div>
+<div class="text-5xl font-black text-white tracking-tighter">50,000+</div>
+</div>
+<div class="bg-surface-container-low p-12">
+<div class="font-label text-secondary mb-2 text-xs tracking-widest uppercase">Precision Rate</div>
+<div class="text-5xl font-black text-white tracking-tighter">99%</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Origin Story -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative order-2 md:order-1">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-container/10 blur-[120px] rounded-full"></div>
+<img class="w-full aspect-square object-cover rounded-xl grayscale opacity-80 hover:grayscale-0 transition-all duration-700" data-alt="Digital hologram globe glowing with blue connection lines representing a global technology network in a dark cinematic space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4bhxTcfW-GF2Wid_wiOBsnSOYxOLzQ4Vwu6r9I9TczQoVAjn5gieMnQYuHSpOTX0oDEfQForxcPf8xJu150me_IA13b9MtJpD7cGTUh8f_v8QcSnp3BVVye_eyxIop07agAmxIrvEczRNT_KQkYdnvBjXB9req7CWZRylP22uQLENq8oVzqFajjIq4HjcSDKOm-GngNawwOkx7AwG6C9dgYlOo4y8PKNgEreShZkhuSmcG5EBetMrO7eMklZDbQx9pNShkf89oJ96"/>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label text-primary tracking-widest uppercase text-xs mb-8 block">Our Journey</span>
+<h2 class="text-5xl md:text-7xl font-black tracking-tighter text-white uppercase mb-12 leading-tight">
+                        From a garage in <span class="text-secondary">Bengaluru</span> to the skies of <span class="text-primary">India</span>
+</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed max-w-xl">
+<p>SkyArc began with a simple observation: the drone industry was importing solutions that weren't built for India's extreme topography and atmospheric unpredictability.</p>
+<p>Our founders, a group of aerospace engineers and data scientists, dedicated three years to building a flight controller from the ground up—one that could handle everything from the thin air of the Himalayas to the heavy humidity of the Western Ghats.</p>
+<p>Today, we aren't just building drones; we are building the neural network of Indian aerospace.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline -->
+<section class="bg-surface-container-lowest py-32 px-8">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl font-black tracking-tighter text-white uppercase mb-24 text-center">Built year by year</h2>
+<div class="space-y-12">
+<div class="flex gap-12 relative group">
+<div class="w-24 shrink-0 text-right">
+<span class="font-label text-primary font-bold text-xl">2021</span>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-px h-full bg-outline-variant/30 absolute top-0 left-1/2 -translate-x-1/2"></div>
+<div class="w-3 h-3 rounded-full bg-primary relative z-10 mt-2"></div>
+</div>
+<div class="pb-12">
+<h4 class="text-white font-bold text-xl mb-2">The Spark</h4>
+<p class="text-on-surface-variant text-sm max-w-md">Initial R&amp;D phase in a shared workspace in Indiranagar. First autonomous hover achieved with the "Argus V1" prototype.</p>
+</div>
+</div>
+<div class="flex gap-12 relative group">
+<div class="w-24 shrink-0 text-right">
+<span class="font-label text-primary font-bold text-xl">2023</span>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-px h-full bg-outline-variant/30 absolute top-0 left-1/2 -translate-x-1/2"></div>
+<div class="w-3 h-3 rounded-full bg-primary relative z-10 mt-2"></div>
+</div>
+<div class="pb-12">
+<h4 class="text-white font-bold text-xl mb-2">Fleet Deployment</h4>
+<p class="text-on-surface-variant text-sm max-w-md">Launch of the SkyArc Fleet Management platform. Secured strategic partnerships with three state governments for medical delivery.</p>
+</div>
+</div>
+<div class="flex gap-12 relative group">
+<div class="w-24 shrink-0 text-right">
+<span class="font-label text-primary font-bold text-xl">2024</span>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-px h-full bg-outline-variant/30 absolute top-0 left-1/2 -translate-x-1/2"></div>
+<div class="w-3 h-3 rounded-full bg-primary relative z-10 mt-2"></div>
+</div>
+<div class="pb-12">
+<h4 class="text-white font-bold text-xl mb-2">Precision Horizon</h4>
+<p class="text-on-surface-variant text-sm max-w-md">Integration of AI-driven terrain following and 5G connectivity across the entire drone ecosystem.</p>
+</div>
+</div>
+<div class="flex gap-12 relative group">
+<div class="w-24 shrink-0 text-right">
+<span class="font-label text-secondary font-bold text-xl opacity-60">2026</span>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-px h-24 bg-gradient-to-b from-outline-variant/30 to-transparent absolute top-0 left-1/2 -translate-x-1/2"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant relative z-10 mt-2"></div>
+</div>
+<div class="">
+<h4 class="text-zinc-500 font-bold text-xl mb-2 italic">The Galactic Jump</h4>
+<p class="text-zinc-600 text-sm max-w-md">Projected launch of the first low-orbit monitoring satellite constellation designed for real-time drone routing.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Principles Grid -->
+<section class="py-32 px-8">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/10">
+<div class="bg-surface p-12 hover:bg-surface-container transition-colors group">
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-zinc-500 mb-8 block">Principle 01</span>
+<h3 class="text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors">Safety First</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Every flight is protected by triple-redundant fail-safes and automated return-to-base protocols.</p>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-container transition-colors group">
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-zinc-500 mb-8 block">Principle 02</span>
+<h3 class="text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors">Precision Obsessed</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Centimeter-level accuracy enabled by our proprietary RTK-GPS integration and lidar arrays.</p>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-container transition-colors group">
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-zinc-500 mb-8 block">Principle 03</span>
+<h3 class="text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors">Built for India</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Hardware ruggedized for dust, monsoons, and extreme temperatures from 0°C to 50°C.</p>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-container transition-colors group">
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-zinc-500 mb-8 block">Principle 04</span>
+<h3 class="text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors">Relentless Innovation</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">100% of our codebase and 80% of our hardware design is developed in-house at our HQ.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership Section -->
+<section class="py-40 px-8">
+<div class="max-w-[1440px] mx-auto">
+<div class="mb-20">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4 block text-center md:text-left">The Minds Behind The Mission</span>
+<h2 class="text-5xl md:text-7xl font-black tracking-tighter text-white uppercase text-center md:text-left">Our Leadership</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-start">
+<!-- Left: Manoj Kumar -->
+<div class="relative pt-12 border-t border-outline-variant/30">
+<div class="mb-12">
+<h3 class="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-2">Manoj Kumar</h3>
+<div class="font-label text-secondary text-sm tracking-widest uppercase font-semibold">CEO &amp; Founder</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary/20 text-7xl absolute -top-8 -left-6 select-none">format_quote</span>
+<p class="text-2xl md:text-3xl font-medium tracking-tight text-on-surface leading-relaxed italic relative z-10">
+                    "Precision is not just a goal; it's our foundational promise to every industry we serve."
+                </p>
+</div>
+</div>
+<!-- Right: Sanjay Abhishek -->
+<div class="relative pt-12 border-t border-outline-variant/30">
+<div class="mb-12">
+<h3 class="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-2">Sanjay Abhishek</h3>
+<div class="font-label text-secondary text-sm tracking-widest uppercase font-semibold">CEO &amp; Founder</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary/20 text-7xl absolute -top-8 -left-6 select-none">format_quote</span>
+<p class="text-2xl md:text-3xl font-medium tracking-tight text-on-surface leading-relaxed italic relative z-10">
+                    "We don't just fly drones; we deliver the aerial intelligence that powers the next generation of Indian infrastructure."
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-24">
+<div class="md:col-span-1">
+<h2 class="text-4xl font-black tracking-tighter text-white uppercase mb-8">Bengaluru HQ</h2>
+<p class="text-on-surface-variant mb-12">Our state-of-the-art research and development facility located in the heart of India's Silicon Valley.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<div class="text-white font-bold uppercase text-xs tracking-widest mb-1">Address</div>
+<p class="text-on-surface-variant text-sm">Tech Horizon Park, Block 42, <br/>Whitefield, Bengaluru, KA 560066</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<div class="text-white font-bold uppercase text-xs tracking-widest mb-1">Inquiries</div>
+<p class="text-on-surface-variant text-sm">hq@skyarc.tech</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 rounded-xl overflow-hidden h-[500px] grayscale brightness-50 contrast-125 border border-outline-variant/15">
+<!-- Map Placeholder with Location Data -->
+<div class="w-full h-full bg-surface-container-highest relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Minimalist dark monochromatic map of Bengaluru city streets with subtle blue glowing highlight on Whitefield area" data-location="Bengaluru" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxOrL4AUDaU551MXK_dqUhVUka3OJPtF7Lxun8q-_FaWkRU259mCPu8tDhkmTZyxamkhdQqczcQBjlhf3Z9ShV9Ffj8wMsP0r9vOr54ZyIK_OefeY55jshmv6IuV5-7pvk1VMw0jztaSzeBlrODgVbOPzpJ4BpvLEwzswbQoQyqZragWDlkP16_njW8svPe1qVVOFupxrXb5Ei68_OVSRKy3VgOgQPFFn_7G7qoBKsMLu7x0CsHPluOrsTu26i3G85J7AR-Ts1K5s9"/>
+<div class="absolute inset-0 bg-blue-900/10 mix-blend-overlay"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<div class="absolute inset-0 bg-primary animate-ping rounded-full scale-150 opacity-20"></div>
+<div class="w-4 h-4 bg-primary rounded-full relative z-10 border-4 border-surface"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-16 py-20 max-w-[1920px] mx-auto">
+<div class="flex flex-col">
+<div class="text-lg font-black text-white tracking-tighter mb-6">SKYARC</div>
+<p class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-500 leading-relaxed">
+                    Engineering the future of autonomous aerial intelligence. From Bengaluru to the world.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-white mb-2">Navigation</div>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Mission</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Solutions</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Fleet</a>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-white mb-2">Legal</div>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Contact</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-600 hover:text-blue-400 transition-colors" href="#">Terms</a>
+</div>
+<div class="flex flex-col justify-end">
+<p class="font-['Space_Grotesk'] text-[11px] tracking-widest uppercase text-zinc-500">
+                    © 2024 SkyArc Technologies. Engineered for the Cinematic Horizon.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
