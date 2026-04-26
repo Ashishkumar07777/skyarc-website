@@ -326,26 +326,45 @@
 }
 
 .beat-cta-heading {
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-heading);
+  color: var(--color-text-white);
   line-height: 1.15;
   letter-spacing: -1px;
   margin-bottom: var(--space-4);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 .beat-cta-sub {
-  font-size: 17px;
-  color: var(--color-text-body);
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: var(--color-text-white);
+  font-weight: var(--font-weight-medium);
   margin-bottom: var(--space-8);
   line-height: 1.6;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
 }
 
 .beat-cta-buttons {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-6);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.beat-cta-buttons .btn-primary,
+.beat-cta-buttons .btn-outline {
+  font-size: 18px;
+  padding: 16px 40px;
+  font-weight: var(--font-weight-bold);
+}
+
+.beat-cta-buttons .btn-outline {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--color-border-medium);
+}
+.beat-cta-buttons .btn-outline:hover {
+  background: rgba(0, 102, 255, 0.1);
+  border-color: var(--color-accent-blue);
 }
 
 /* ============================================================

@@ -61,23 +61,23 @@
     ctx.fillStyle = '#050505';
     ctx.fillRect(0, 0, cw, ch);
 
-    // Cover fit the image
+    // Cover fit the image with an additional scale to crop out edge watermarks
     const imgRatio = img.naturalWidth / img.naturalHeight;
     const canvasRatio = cw / ch;
 
     let drawW, drawH, drawX, drawY;
+    const cropScale = 1.08; // Scales up by 8% to hide watermarks at the edges
 
     if (canvasRatio > imgRatio) {
-      drawW = cw;
-      drawH = cw / imgRatio;
-      drawX = 0;
-      drawY = (ch - drawH) / 2;
+      drawW = cw * cropScale;
+      drawH = (cw / imgRatio) * cropScale;
     } else {
-      drawH = ch;
-      drawW = ch * imgRatio;
-      drawX = (cw - drawW) / 2;
-      drawY = 0;
+      drawH = ch * cropScale;
+      drawW = (ch * imgRatio) * cropScale;
     }
+
+    drawX = (cw - drawW) / 2;
+    drawY = (ch - drawH) / 2;
 
     ctx.drawImage(img, drawX, drawY, drawW, drawH);
   }
