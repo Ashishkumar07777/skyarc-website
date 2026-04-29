@@ -42,11 +42,13 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Import routes (we'll create these files next)
+// Import routes
 const applicationRoutes = require('./routes/applications');
+const bookingRoutes = require('./routes/bookings');
 
 // Use routes
 app.use('/api/applications', applicationRoutes);
+app.use('/api/bookings', bookingRoutes);
 
 // 404 handler
 app.use((req, res) => {
